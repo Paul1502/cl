@@ -3,7 +3,7 @@ window.onload = function() {
   setTimeout(function() {
     document.getElementById('loader').style.display = 'none';
     document.querySelector('.content').style.display = 'block';
-  }, 1500); // 1,5 Sekunden Verzögerung
+  }, 1000); // 1 Sekunde Verzögerung
 };
 
 // Dynamische Logo-Bewegung mit Maus-Tracking
