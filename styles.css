@@ -2,8 +2,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top, #000000, #111111); /* Dunkler, lebendiger Hintergrund */
-  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top, #2c2f33, #23272a); /* Edler, dunkler Hintergrund */
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,23 +14,17 @@ body {
   position: relative;
 }
 
-/* Logo-Styling und maximal lebendige Animationen */
+/* Premium Logo-Styling und Animation */
 .logo-container {
   position: relative;
-  margin-bottom: 80px; /* Abstand zwischen Logo und Button */
-  perspective: 1000px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .logo {
   width: 350px;
-  animation: breathing 6s infinite ease-in-out, float 6s ease-in-out infinite;
-  transform-style: preserve-3d;
-}
-
-@keyframes breathing {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  height: auto;
+  animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -39,25 +33,26 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* Parallax Hintergrund für 3D-Effekt */
-body::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
-  z-index: -1;
-  animation: background-move 10s infinite linear;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@keyframes background-move {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(360deg); }
+/* SOON Text Styling */
+.soon-text h1 {
+  font-size: 64px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  letter-spacing: 5px;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
-/* Discord Button – Auf ein neues Level gebracht */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+  100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+}
+
+/* Discord Button – Premium Level Design */
 .discord-link {
   text-decoration: none;
 }
@@ -68,20 +63,20 @@ body::before {
   font-size: 24px;
   font-weight: bold;
   color: white;
-  background: linear-gradient(135deg, #00ff87, #0056e0);
+  background: linear-gradient(135deg, #7289da, #99aab5);
   border: none;
   border-radius: 50px;
   text-transform: uppercase;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.5);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
   overflow: hidden;
 }
 
 .discord-button:hover {
-  transform: scale(1.15);
-  background: linear-gradient(135deg, #0056e0, #00ff87);
-  box-shadow: 0 25px 45px rgba(0, 255, 135, 0.8);
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #99aab5, #7289da);
+  box-shadow: 0 25px 45px rgba(114, 137, 218, 0.7);
 }
 
 .discord-button::before {
@@ -101,12 +96,12 @@ body::before {
   transform: translate(-50%, -50%) scale(1.3);
 }
 
-/* Partikel-Effekte */
+/* Partikel-Effekte beim Klick */
 .particles {
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   animation: particle-animation 1s ease forwards;
 }
