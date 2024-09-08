@@ -1,8 +1,8 @@
-// 3D Logo-Bewegung mit Maus
+// Dynamische Logo-Bewegung mit Maus-Tracking
 document.addEventListener('mousemove', (event) => {
   const logo = document.querySelector('.logo');
-  const x = (window.innerWidth / 2 - event.pageX) / 30;
-  const y = (window.innerHeight / 2 - event.pageY) / 30;
+  const x = (window.innerWidth / 2 - event.pageX) / 50;
+  const y = (window.innerHeight / 2 - event.pageY) / 50;
 
   logo.style.transform = `translate(${x}px, ${y}px) rotateY(${x}deg) rotateX(${y}deg)`;
 });
