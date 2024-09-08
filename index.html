@@ -8,35 +8,49 @@
 </head>
 <body>
 
-  <!-- Lebendiges, ultra beleuchtetes Logo -->
-  <div class="logo-container">
-    <img src="assets/CountyLandLogo.png" alt="CountyLand Logo" class="logo">
+  <!-- Ladeanimation -->
+  <div id="loader">
+    <div class="spinner"></div>
   </div>
 
-  <!-- SOON Text -->
-  <div class="soon-text">
-    <h1>COMING SOON</h1>
+  <!-- Hauptinhalt nach dem Laden -->
+  <div class="content" style="display: none;">
+
+    <!-- Lebendiges, ultra beleuchtetes Logo -->
+    <div class="logo-container">
+      <img src="assets/CountyLandLogo.png" alt="CountyLand Logo" class="logo">
+    </div>
+
+    <!-- SOON Text -->
+    <div class="soon-text">
+      <h1>COMING SOON</h1>
+    </div>
+
+    <!-- Discord Button -->
+    <a href="https://discord.gg/YOUR_DISCORD_LINK" target="_blank" class="discord-link">
+      <div class="discord-button">
+        <span>Discord!</span>
+      </div>
+    </a>
+
+    <!-- LEAKS Überschrift -->
+    <div class="leaks-title">
+      <h2>LEAKS</h2>
+    </div>
+
+    <!-- Section: Preview Photos -->
+    <section class="preview-section">
+      <div class="preview-photo">
+        <img src="assets/preview1.png" alt="Preview 1">
+      </div>
+      <div class="preview-photo">
+        <img src="assets/preview2.png" alt="Preview 2">
+      </div>
+      <div class="preview-photo">
+        <img src="assets/preview3.png" alt="Preview 3">
+      </div>
+    </section>
   </div>
-
-  <!-- Discord Button -->
-  <a href="https://discord.gg/YOUR_DISCORD_LINK" target="_blank" class="discord-link">
-    <div class="discord-button">
-      <span>Discord!</span>
-    </div>
-  </a>
-
-  <!-- Section: Preview Photos -->
-  <section class="preview-section">
-    <div class="preview-photo">
-      <img src="assets/preview1.png" alt="Preview 1">
-    </div>
-    <div class="preview-photo">
-      <img src="assets/preview2.png" alt="Preview 2">
-    </div>
-    <div class="preview-photo">
-      <img src="assets/preview3.png" alt="Preview 3">
-    </div>
-  </section>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
