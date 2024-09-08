@@ -2,26 +2,27 @@
 body {
   margin: 0;
   padding: 0;
-  background: #111; /* Dunkler Hintergrund für den futuristischen Look */
+  background: #111; /* Dunkler Hintergrund für einen kraftvollen Kontrast */
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  flex-direction: column;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
 /* Logo-Styling und Animationen */
 .logo-container {
-  position: absolute;
-  top: 20%;
+  position: relative;
+  margin-bottom: 50px; /* Abstand zwischen Logo und Button */
   animation: float 4s ease-in-out infinite;
 }
 
 .logo {
-  width: 200px;
+  width: 300px; /* Größeres Logo für mehr Wirkung */
   animation: breathing 6s infinite ease-in-out;
 }
 
@@ -87,3 +88,23 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Partikel-Animationen beim Klick */
+.particles {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: particle-animation 1s ease forwards;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
