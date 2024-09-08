@@ -1,3 +1,11 @@
+// Verhindern, dass die Seite sofort geladen wird
+window.onload = function() {
+  setTimeout(function() {
+    document.getElementById('loader').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+  }, 1500); // 1,5 Sekunden Verzögerung
+};
+
 // Dynamische Logo-Bewegung mit Maus-Tracking
 document.addEventListener('mousemove', (event) => {
   const logo = document.querySelector('.logo');
