@@ -1,0 +1,89 @@
+/* Allgemeine Seiteneinstellungen */
+body {
+  margin: 0;
+  padding: 0;
+  background: #111; /* Dunkler Hintergrund für den futuristischen Look */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Logo-Styling und Animationen */
+.logo-container {
+  position: absolute;
+  top: 20%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo {
+  width: 200px;
+  animation: breathing 6s infinite ease-in-out;
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Discord Button Styling */
+.discord-button {
+  position: relative;
+  padding: 20px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #00ff87, #0056e0);
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.discord-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0);
+  transition: transform 0.6s ease;
+  border-radius: 50px;
+}
+
+.discord-button:hover::before {
+  transform: scale(1);
+}
+
+.discord-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 45px rgba(0, 255, 135, 0.7);
+}
+
+/* Button Hover Animation */
+.discord-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.discord-button:hover span {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
