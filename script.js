@@ -1,10 +1,10 @@
-// Lebendiges Logo mit Mausbewegung und 3D-Effekten
+// Premium Logo mit Mausbewegung und 3D-Effekten
 document.addEventListener('mousemove', (event) => {
   const logo = document.querySelector('.logo');
-  const x = (window.innerWidth / 2 - event.pageX) / 30;
-  const y = (window.innerHeight / 2 - event.pageY) / 30;
+  const x = (window.innerWidth / 2 - event.pageX) / 40;
+  const y = (window.innerHeight / 2 - event.pageY) / 40;
 
-  logo.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.1)`;
+  logo.style.transform = `rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
 });
 
 // Partikel-Effekt beim Discord-Button-Klick
