@@ -1,4 +1,4 @@
-// Verhindern, dass die Seite sofort geladen wird
+// Ladeverzögerung
 window.onload = function() {
   setTimeout(function() {
     document.getElementById('loader').style.display = 'none';
